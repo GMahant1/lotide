@@ -21,6 +21,7 @@ const countLetters = function (string) {
     } else {
       newObject[letters] = 1;
     }
+    // newObject[letters] is to access each value from the for loop, if it exist increase the count by 1 otherwise assign a base value of 1
   }
   return newObject;
 }
