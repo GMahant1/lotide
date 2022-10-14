@@ -18,6 +18,6 @@ const tail = function(array) {
   return newArray;
 };
 
-console.log(tail(["1", "2", "3"]));
+//console.log(tail(["1", "2", "3"]));
 
 module.exports = tail;
