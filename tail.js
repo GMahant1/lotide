@@ -20,6 +20,4 @@ const tail = function(array) {
 
 console.log(tail(["1", "2", "3"]));
 
-const words = ["Hi", "Hello", "Hey"];
-tail(words);
-assertEqual(words.length, 3);
+module.exports = tail;
