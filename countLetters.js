@@ -26,4 +26,6 @@ const countLetters = function (string) {
   return newObject;
 }
 
-console.log(countLetters(testString));
+//console.log(countLetters(testString));
+
+module.exports = countLetters;

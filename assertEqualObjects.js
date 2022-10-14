@@ -44,6 +44,16 @@ const eqObjects = function(object1, object2) {
 return true;
 };
 
+
+const assertEqualObjects = function(actual, expected) {
+  const inspect = require("util").inspect;
+  if (eqObjects) {
+    console.log(`🟢 Assertion Passed: Objects are equal  ${actual} === ${expected}`);
+  } else {
+   console.log(`🔴 Assertion Failed: Objects are not equal ${actual} !== ${expected}`);
+  }
+};
+
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 //eqObjects(ab, ba); // => true
@@ -58,9 +68,10 @@ const dc = { d: ["2", 3], c: "1" };
 const cd2 = { c: "1", d: ["2", 3, 4] };
 //eqObjects(cd, cd2); // => false
 
-//  assertEqual(eqObjects(ab, ba), true);
-//  assertEqual(eqObjects(ab, abc), false);
-// assertEqual(eqObjects(cd, dc), true);
-//  assertEqual(eqObjects(cd, cd2), false);
+// assertEqualObjects(eqObjects(ab, ba), true);
+// assertEqualObjects(eqObjects(ab, abc), false);
+// assertEqualObjects(eqObjects(cd, dc), false);
+// assertEqualObjects(eqObjects(cd, cd2), false);
 
-module.exports = eqObjects;
+
+ module.exports = assertEqualObjects;
