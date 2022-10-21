@@ -1,3 +1,5 @@
+// function used to check if two values are equal, returns true if equal and false otherwise
+
 const assertEqual = function(actual, expected) {
   
   if (actual === expected) {
