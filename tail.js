@@ -1,23 +1,20 @@
-const assertEqual = function(actual, expected) {
-  
-  if (actual === expected) {
-    console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
-  }
-
-  if (actual !== expected) {
-    console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
+// function that takes in an array and returns everything except the first element
 
 const tail = function(array) {
+
   let newArray = [];
-  for (let i = 1; i < array.length; i++) {
-    newArray.push(array[i]);
+
+  if (!Array.isArray(array)) {
+    return "Input is not a valid array";
   }
+
+  if (Array.isArray(array)) {
+    for (let i = 1; i < array.length; i++) {
+      newArray.push(array[i]);
+    }
+  }
+
   return newArray;
 };
-
-//console.log(tail(["1", "2", "3"]));
 
 module.exports = tail;
