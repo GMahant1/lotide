@@ -8,7 +8,7 @@ const letterPositions = function(sentence) {
   }
 
   for (let i = 0; i < sentence.length; i++) {
-
+    //assumption that letter case does not matter, "T" === "t"
     if (sentence[i] !== " ") {
       if (results[sentence[i]]) {
         results[sentence[i]].push(i);
