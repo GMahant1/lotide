@@ -1,27 +1,25 @@
-const test = "hello world";
-
+//function that takes in a string and returns all indices of letter positions 
 const letterPositions = function(sentence) {
+
   const results = {};
 
+  if (typeof sentence !== "string") {
+    return "Input is not a valid string";
+  }
+
   for (let i = 0; i < sentence.length; i++) {
+
     if (sentence[i] !== " ") {
-    if (results[sentence[i]]) {
-      results[sentence[i]].push(i);
-    } else {
-      results[sentence[i]] = [i];
+      if (results[sentence[i]]) {
+        results[sentence[i]].push(i);
+      } else {
+        results[sentence[i]] = [i];
+      }
     }
   }
-}
 
   return results;
 };
 
-
-//console.log(letterPositions(test));
-
 module.exports = letterPositions;
 
-// results[sentence[0]] = result[sentence[0]].push(i);
-// result = {h: [0]}
-
-// result[h].push()
